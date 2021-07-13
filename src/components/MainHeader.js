@@ -1,8 +1,9 @@
+import { classes } from "istanbul-lib-coverage";
 import { Link } from "react-router-dom";
 
 const MainHeader = () => {
   return (
-    <header>
+    <header className={classes.header}>
       <nav>
         <ul>
           <li> 
