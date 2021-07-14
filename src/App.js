@@ -1,9 +1,9 @@
-import { Route, Switch, Redirect } from 'react-router-dom';
+import { Route, Switch, Redirect } from "react-router-dom";
 
-import Welcome from './pages/Welcome';
-import Products from './pages/Products';
-import ProductDetail from './pages/ProductDetail';
-import MainHeader from './components/MainHeader';
+import Welcome from "./pages/Welcome";
+import Products from "./pages/Products";
+import ProductDetail from "./pages/ProductDetail";
+import MainHeader from "./components/MainHeader";
 
 function App() {
   return (
@@ -11,16 +11,16 @@ function App() {
       <MainHeader />
       <main>
         <Switch>
-          <Route path='/' exact>
-            <Redirect to='/welcome' />
+          <Route path="/" exact>
+            <Redirect to="/welcome" />
           </Route>
-          <Route path='/welcome'>
+          <Route path="/welcome">
             <Welcome />
           </Route>
-          <Route path='/products' exact>
+          <Route path="/products" exact>
             <Products />
           </Route>
-          <Route path='/products/:productId'>
+          <Route path="/products/:productId">
             <ProductDetail />
           </Route>
         </Switch>
@@ -41,6 +41,6 @@ export default App;
 // our-domian.com/product-detail/any-value
 
 // we have to bind the <App /> in index.js file with <BrowserRoute>
-// when we use react routes its behaviour to fetch all relaed data by using switch we prevent it 
+// when we use react routes its behaviour to fetch all related data by using switch we prevent it
 // insures that the exact api should be hit
 // prevent the browser default behaviour pf refresh and give power to apply css on it  when clivk to the link bcoz it losses the state.
